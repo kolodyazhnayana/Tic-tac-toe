@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Square from "./components/square"
+import Wrapper from "./components/wrapper"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const fieldModel = [
+        0, 0, 0,
+        0, 0, 0,
+        0, 0, 0
+    ]
+
+    const content = fieldModel.map((item, index) => <Square state={Boolean(item)} key={index} />)
+
+    return (
+        <div className="App">
+            <Wrapper>
+                {content}
+            </Wrapper>
+        </div>
+    )
 }
 
-export default App;
+export default App

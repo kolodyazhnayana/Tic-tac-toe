@@ -1,0 +1,21 @@
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: darkgrey;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .square {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 425px) {
+    .square {
+        width: 100px;
+        height: 100px;
+    }
+}
