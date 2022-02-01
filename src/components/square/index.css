@@ -6,6 +6,14 @@
     cursor: pointer;
 }
 
+.square.cross {
+    background-color: #a6b9ba;
+}
+
+.square.zero {
+    background-color: #c9abab;
+}
+
 @media (max-width: 768px) {
     .square {
         width: 120px;

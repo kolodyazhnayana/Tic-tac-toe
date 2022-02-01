@@ -1,12 +1,23 @@
 import './index.css'
+import clsx from "clsx"
 
 interface ISquare {
-    state: boolean
+    state: number,
+    id: number
 }
 
-const Square = ({ state }: ISquare) => {
+const Square = ({ state, id }: ISquare) => {
+    let className = clsx(
+        'square',
+        state === 1 && 'cross',
+        state === 2 && 'zero'
+    )
+
     return (
-        <div className='square' />
+        <div
+            className={className}
+            onClick={() => console.log(id)}
+        />
     )
 }
 
