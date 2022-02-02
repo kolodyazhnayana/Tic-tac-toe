@@ -1,9 +1,9 @@
 import {createEvent, createStore} from 'effector'
-import {Field} from "../../interfaces/field"
+import {FieldI} from "../../interfaces/field"
 
-export const changeField = createEvent<Field[]>('change-field')
+export const changeField = createEvent<FieldI[]>('change-field')
 
-export const $fieldModel = createStore<Field[]>([
+export const $fieldModel = createStore<FieldI[]>([
     {
         value: 0,
         id: 0

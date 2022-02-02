@@ -5,5 +5,3 @@ forward({
     from: changeField,
     to: $fieldModel
 })
-
-$fieldModel.watch(state => console.log('store changed: ', state))

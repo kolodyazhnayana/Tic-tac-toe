@@ -1,4 +1,4 @@
-export interface Field {
+export interface FieldI {
     value: number,
     id: number
 }

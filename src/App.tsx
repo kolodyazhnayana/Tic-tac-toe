@@ -4,12 +4,12 @@ import Square from "./components/square"
 import Wrapper from "./components/wrapper"
 import './models/init'
 import {useStore} from "effector-react"
-import { $fieldModel } from './models/field/index'
+import { $fieldModel } from './models/field'
 
 function App() {
     const fields = useStore($fieldModel)
 
-    const content = fields.map(item => <Square state={item.value} key={item.id} id={item.id} />)
+    const content = fields.map(item => <Square value={item.value} key={item.id} id={item.id} />)
 
     return (
         <div className="App">
