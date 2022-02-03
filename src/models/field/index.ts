@@ -3,6 +3,8 @@ import {FieldI} from "../../interfaces/field"
 
 export const changeField = createEvent<FieldI[]>('change-field')
 
+export const updateFieldItem = createEvent<FieldI>('update-field-item')
+
 export const $fieldModel = createStore<FieldI[]>([
     {
         value: 0,

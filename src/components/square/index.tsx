@@ -1,6 +1,6 @@
 import './index.css'
 import clsx from "clsx"
-import {$fieldModel, changeField} from "../../models/field"
+import {$fieldModel, updateFieldItem} from "../../models/field"
 import {useStore} from "effector-react"
 import {$player, changePlayer} from "../../models/players"
 import {FieldI} from "../../interfaces/field"
@@ -19,8 +19,7 @@ const Square = ({ value, id }: FieldI) => {
         changePlayer(player === 'cross' ? 'zero' : 'cross')
         let field = fields[id]
         player === 'cross' ? field.value = 1 : field.value = 2
-        const res = fields.map(el => el.id !== field.id ? el : field)
-        changeField(res)
+        updateFieldItem(field)
     }
 
     return (
