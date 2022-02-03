@@ -5,7 +5,7 @@ const Square = ({ value, handle }: SquareProps) => {
     return (
         <div
             className={`square ${value}`}
-            onClick={() => handle()}
+            onClick={handle}
         />
     )
 }
