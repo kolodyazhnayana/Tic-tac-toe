@@ -17,8 +17,7 @@ function App() {
         <Square
             value={item.value}
             key={item.id}
-            id={item.id}
-            handle={handleClick}
+            handle={() => handleClick(item.id)}
         />
     ))
 

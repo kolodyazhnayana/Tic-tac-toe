@@ -5,8 +5,4 @@ export interface FieldI {
     id: number
 }
 
-export interface FieldProps extends FieldI {
-    handle: (id: number) => void
-}
-
 

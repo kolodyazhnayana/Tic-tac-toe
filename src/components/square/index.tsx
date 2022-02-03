@@ -1,19 +1,11 @@
 import './index.css'
-import clsx from "clsx"
-import {FieldProps} from "../../interfaces/field"
+import {SquareProps} from "../../interfaces/square"
 
-const Square = ({ value, id, handle }: FieldProps) => {
-
-    let className = clsx(
-        'square',
-        value === 'cross' && 'cross',
-        value === 'zero' && 'zero'
-    )
-
+const Square = ({ value, handle }: SquareProps) => {
     return (
         <div
-            className={className}
-            onClick={() => handle(id)}
+            className={`square ${value}`}
+            onClick={() => handle()}
         />
     )
 }
