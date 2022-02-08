@@ -3,9 +3,10 @@ import {SquareProps} from "../../interfaces/square"
 
 const Square = ({ value, handle }: SquareProps) => {
     return (
-        <div
+        <button
             className={`square ${value}`}
             onClick={handle}
+            disabled={Boolean(value)}
         />
     )
 }

@@ -4,6 +4,7 @@
     background-color: darkgrey;
     border-radius: 25px;
     cursor: pointer;
+    border: none;
 }
 
 .square.cross {
