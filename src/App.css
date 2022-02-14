@@ -1,5 +1,17 @@
-.App {
+.app {
   max-width: 950px;
   margin: 100px auto;
 }
 
+.heading {
+  text-align: center;
+  color: #262626;
+}
+
+.zero {
+  color: #c9abab;
+}
+
+.cross {
+  color: #a6b9ba;
+}

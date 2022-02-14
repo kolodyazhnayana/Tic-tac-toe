@@ -6,7 +6,7 @@ const isContained = (combination: number[], searchCombination: number[]) => {
     return !res.includes(false)
 }
 
-export const useDetermineWinner = (combination: number[], winnerCombination: number[][]) => {
+export const isDetermineWinner = (combination: number[], winnerCombination: number[][]) => {
     let res = []
     for (let i = 0; i < winnerCombination.length; i++) {
         isContained(combination, winnerCombination[i]) ? res.push(true) : res.push(false)

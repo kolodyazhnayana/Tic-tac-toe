@@ -1,1 +1,1 @@
-export type PlayerT = 'cross' | 'zero'
+export type PlayerT = 'cross' | 'zero' | null

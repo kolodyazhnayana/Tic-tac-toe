@@ -1,5 +1,6 @@
 import {combine, createEvent, createStore} from 'effector'
 import {FieldI} from "../../interfaces/field"
+import {PlayerT} from "../../interfaces/player"
 
 export const changeField = createEvent<FieldI[]>('change-field')
 
@@ -22,4 +23,6 @@ export const $winnerFields = createStore<number[][]>([
 
 export const $crossWinCombination = combine($fieldModel, fields => fields.filter(item => item.value === "cross").map(item => item.id))
 export const $zeroWinCombination = combine($fieldModel, fields => fields.filter(item => item.value === "zero").map(item => item.id))
+
+export const $isWinner = createStore<PlayerT>(null)
 

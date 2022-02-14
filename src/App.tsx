@@ -4,10 +4,11 @@ import Square from "./components/square"
 import Wrapper from "./components/wrapper"
 import './models/init'
 import {useStore} from "effector-react"
-import {$fieldModel, markField} from './models/field'
+import {$fieldModel, $isWinner, markField} from './models/field'
 
 function App() {
     const fields = useStore($fieldModel)
+    const winner = useStore($isWinner)
 
     const handleClick = (id: number) => {
         markField(id)
@@ -22,7 +23,10 @@ function App() {
     ))
 
     return (
-        <div className="App">
+        <div className="app">
+            {
+                winner && <h1 className='heading'>Is winner: <span className={winner}>{winner}</span></h1>
+            }
             <Wrapper>
                 {content}
             </Wrapper>

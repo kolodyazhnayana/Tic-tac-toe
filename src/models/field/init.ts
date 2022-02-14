@@ -1,6 +1,15 @@
 import {forward, sample} from "effector"
-import {$fieldModel, changeField, markField} from "./index"
+import {
+    $crossWinCombination,
+    $fieldModel,
+    $isWinner,
+    $winnerFields,
+    $zeroWinCombination,
+    changeField,
+    markField
+} from "./index"
 import {$player, changePlayer} from "../players"
+import {isDetermineWinner} from "../../helpers/isDetermineWinner"
 
 sample({
     clock: markField,
@@ -23,7 +32,24 @@ sample({
     target: changeField
 })
 
+sample({
+    clock: markField,
+    source: {
+        cross: $crossWinCombination,
+        zero: $zeroWinCombination,
+        model: $winnerFields
+    },
+    fn: (state) => {
+        if (isDetermineWinner(state.cross, state.model)) return 'cross'
+        if (isDetermineWinner(state.zero, state.model)) return 'zero'
+        return null
+    },
+    target: $isWinner
+})
+
 forward({
     from: changeField,
     to: $fieldModel
 })
+
+$isWinner.watch(state => console.log(state))
