@@ -1,15 +1,13 @@
 const isContained = (combination: number[], searchCombination: number[]) => {
-    let res = []
     for (let i = 0; i < searchCombination.length; i++) {
-        !combination.includes(searchCombination[i]) ? res.push(false) : res.push(true)
+        if (!combination.includes(searchCombination[i])) return false
     }
-    return !res.includes(false)
+    return true
 }
 
 export const isDetermineWinner = (combination: number[], winnerCombination: number[][]) => {
-    let res = []
     for (let i = 0; i < winnerCombination.length; i++) {
-        isContained(combination, winnerCombination[i]) ? res.push(true) : res.push(false)
+        if (isContained(combination, winnerCombination[i])) return true
     }
-    return res.includes(true)
+    return false
 }
