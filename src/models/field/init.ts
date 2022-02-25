@@ -51,5 +51,3 @@ forward({
     from: changeField,
     to: $fieldModel
 })
-
-$isWinner.watch(state => console.log(state))

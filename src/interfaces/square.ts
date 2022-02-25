@@ -5,5 +5,6 @@ export interface SquareI {
 }
 
 export interface SquareProps extends SquareI {
-    handle: () => void
+    handle: () => void,
+    winner: boolean
 }

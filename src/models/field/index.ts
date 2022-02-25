@@ -25,4 +25,3 @@ export const $crossWinCombination = combine($fieldModel, fields => fields.filter
 export const $zeroWinCombination = combine($fieldModel, fields => fields.filter(item => item.value === "zero").map(item => item.id))
 
 export const $isWinner = createStore<PlayerT>(null)
-

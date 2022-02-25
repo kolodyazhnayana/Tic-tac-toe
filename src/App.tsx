@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css'
 import Square from "./components/square"
 import Wrapper from "./components/wrapper"
@@ -19,6 +18,7 @@ function App() {
             value={item.value}
             key={item.id}
             handle={() => handleClick(item.id)}
+            winner={Boolean(winner)}
         />
     ))
 
