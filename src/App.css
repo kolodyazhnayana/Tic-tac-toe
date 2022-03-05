@@ -15,3 +15,8 @@
 .cross {
   color: #a6b9ba;
 }
+
+.wrap-flex {
+  display: flex;
+  justify-content: center;
+}

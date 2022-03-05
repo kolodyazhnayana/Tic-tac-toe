@@ -6,6 +6,7 @@ import {
     $winnerFields,
     $zeroWinCombination,
     changeField,
+    changeWinner,
     markField
 } from "./index"
 import {$player, changePlayer} from "../players"
@@ -50,4 +51,9 @@ sample({
 forward({
     from: changeField,
     to: $fieldModel
+})
+
+forward({
+    from: changeWinner,
+    to: $isWinner
 })
